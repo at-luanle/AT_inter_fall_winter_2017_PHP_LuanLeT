@@ -1,0 +1,24 @@
+*{margin: 0;padding: 0;}
+body{
+	margin: 50px auto;
+	width: 996px;
+}
+.error{
+	color: red;
+}
+.form{
+	padding: 5px;
+}
+.form h1{
+	background-color: orange;
+	padding: 5px;
+	text-align: center;
+}
+.form tr{
+	height: 50px;
+}
+.btn{
+	background-color: orange;
+	padding: 10px;
+	color: #fff;
+}
