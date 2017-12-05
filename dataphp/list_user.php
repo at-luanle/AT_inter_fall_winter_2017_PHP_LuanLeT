@@ -14,7 +14,11 @@
 	<title>All User</title>
 </head>
 <body>
-	<h1>LIST ALL USER:<?php echo $_SESSION['loginuser'];?> </h1>
+	<h1>LIST ALL USER:
+    <?php
+      echo $_SESSION["user_name"];
+    ?>
+</h1>
 	<table border="1px">
 		<tr>
 			<th>STT</th>
@@ -25,19 +29,19 @@
 			<th>Password</th>
 			<th>Delete</th>
 		</tr>
-	<?php foreach($users as $key=>$u):?>
+	<?php foreach($users as $key=>$user):?>
 		<tr>
 			<td><?php echo ++$key;?></td>
-			<td><img src="<?php $u['image']?>"></td>
-			<td><?php echo $u['fullname'];?></td>
-			<td><a href="edituser.php?id=<?php echo $u['id']?>"><?php echo $u['username'];?></a> </td>	
-			<td><?php echo $u['email'];?></td>
-			<td><?php echo $u['password'];?></td>
-			<td><a href="delete.php?id=<?php echo $u['id']?>">Delete</a></td>			
+			<td><img src="img/.'<?php echo $user["image"];?>'" width="30px" height="30px"></td>
+			<td><?php echo $user['fullname'];?></td>
+			<td><a href="edit_user.php?id=<?php echo $user['id']?>"><?php echo $user['username'];?></a> </td>
+			<td><?php echo $user['email'];?></td>
+			<td><?php echo $user['password'];?></td>
+			<td><a href="delete.php?id=<?php echo $user['id']?>">Delete</a></td>
 		</tr>
 	<?php endforeach ?>
 	</table>
-	<a href="register.php">Register</a>
 	<a href="logout.php">Logout</a>
+  <a href="register.php">Register</a>
 </body>
 </html>

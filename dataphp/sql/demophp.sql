@@ -1,10 +1,10 @@
-CREATE DATABASE  IF NOT EXISTS `demophp` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
+CREATE DATABASE  IF NOT EXISTS `demophp` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `demophp`;
 -- MySQL dump 10.13  Distrib 5.5.58, for debian-linux-gnu (x86_64)
 --
--- Host: 192.168.33.10    Database: demophp
+-- Host: 127.0.0.1    Database: demophp
 -- ------------------------------------------------------
--- Server version	5.7.20-0ubuntu0.16.04.1
+-- Server version	5.5.58-0ubuntu0.14.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,13 +26,13 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `fullname` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `username` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `email` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `password` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `images` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fullname` varchar(45) DEFAULT NULL,
+  `username` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `image` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'nguyenvan','anguyen','anguyen@gmail.com','123456',NULL),(4,'wteryery','yeryeryeruriyti','steryyreyer@srhxfh','2233776c596bd389dee3672772d69a42',NULL),(5,'qweq','ewqewqew','ewqewqe@sdgasdg','ab4540f04826aa338d0af69aaad030a2',NULL),(6,'admin','admin','admin@gmail.com','e10adc3949ba59abbe56e057f20f883e',NULL);
+INSERT INTO `users` VALUES (1,'admin','admin','admin@gmail.com','123456','LeThanhLuan.jpg'),(4,'quang dung','dungle','dung@gmail.com','123456','LeThanhLuan.jpg'),(5,'duong doi la the','duongle','duongle@gmail.com','123456','LeThanhLuan.jpg'),(6,'phat to','phatot','phato@gmail.com','123456','LeThanhLuan.jpg'),(7,'dangnguyen','dangnguyen','dangnguyen@gmail.com','123456','LeThanhLuan.jpg'),(8,'kha nguyen le','lekha','lekha@gmail.com','123456','LeThanhLuan.jpg'),(9,'quyen le','lequyen','lequyen@gmail.com','1234567','LeThanhLuan.jpg');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-28 17:16:31
+-- Dump completed on 2017-12-05  8:00:23

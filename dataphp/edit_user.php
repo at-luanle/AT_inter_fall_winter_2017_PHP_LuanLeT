@@ -21,7 +21,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<form action="process_edituser.php" method="POST">
+	<form action="process_user.php" method="POST">
 		<input type="hidden" name="id" value="<?php echo $user['id']; ?>" class="btn">
 		<table class="form">
 			<tr>
